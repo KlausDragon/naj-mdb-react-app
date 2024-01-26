@@ -1,0 +1,20 @@
+@use "sass:math";
+@use "variables" as *;
+
+
+@function em($px, $bc: 16) {
+  @return #{math.div($px, $bc)}em;
+}
+
+@function rem($px) {
+  @return #{math.div($px, 16)}rem;
+}
+
+// Media Query Mixin
+@mixin mq($w) {
+  $w: em($w);
+
+  @media (min-width: $w) {
+    @content;
+  }
+}
