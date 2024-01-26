@@ -33,12 +33,14 @@
   transition: opacity 0.3s ease;
 }
 
-@media (min-width: $desktop){
+@include mq($desktop){
     .card:hover .overlay {
         display: flex;
         opacity: 1;
       }
 }
+
+
 
 .title-and-release {
   margin: 0 0 0 1rem;
