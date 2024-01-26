@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import PageHome from "../pages/pageHome";
-import WorkShop from "../pages/WorkShop";
+import PageAbout from "../pages/PageAbout";
 import PageSingleMovie from "../pages/PageSingleMovie";
+import PageFavorite from "../pages/PageFavorite";
 import { GlobalProvider } from "../context/GlobalContext";
 import Banner from "../components/Banner";
 
@@ -9,12 +12,16 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <GlobalProvider>
+        <Header />
         <Routes>
           <Route path="/" element={<PageHome />} />
           <Route path="/movie/:id" element={<PageSingleMovie />} />
           <Route path="/test/:id" element={<Banner />} />
           <Route path="/workshop" element={<WorkShop />} />
+          <Route path="/about" element={<PageAbout />} />
+          <Route path="/favorite" element={<PageFavorite />} />
         </Routes>
+        <Footer />
       </GlobalProvider>
     </BrowserRouter>
   );

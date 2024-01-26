@@ -1,3 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 @use "defaults";
+
+@use "header";
+@use "footer";
+@use "banner";

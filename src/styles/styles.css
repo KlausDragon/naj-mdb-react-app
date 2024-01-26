@@ -1,7 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body {
   background-color: #000000;
-  color: #FFFFFF;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+header.show nav {
+  display: block;
+}
+
+header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .hamburger {
+  all: unset;
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+nav {
+  display: none;
+  background-color: rgba(0, 0, 17, 0.2666666667);
+  color: aliceblue;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: #ffc000;
+}
+
+footer {
+  background-color: #161616;
+  text-align: center;
+  padding: 1px 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

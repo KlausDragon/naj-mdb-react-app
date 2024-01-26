@@ -1,0 +1,43 @@
+@use "variables" as *;
+
+header.show nav {
+  display: block;
+}
+
+header {
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hamburger {
+    all: unset;
+    font-size: 3rem;
+    margin: 1rem;
+  }
+}
+
+nav {
+  display: none;
+  background-color: #0014;
+  color: aliceblue;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 1rem;
+    li {
+      a {
+        text-decoration: none;
+        color: aliceblue;
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: $primary-color-yellow;
+        }
+      }
+    }
+  }
+}
