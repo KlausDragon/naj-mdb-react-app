@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 header.show nav {
   display: block;
@@ -8,15 +9,16 @@ header {
   .header-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     .hamburger {
       all: unset;
       font-size: 3rem;
-      margin: 0.1rem;
+      margin: 0.2rem 1rem;
       cursor: pointer;
     }
     img {
       width: 60px;
-      margin: 0.5rem;
+      margin: 1rem 2rem;
     }
   }
   nav {
@@ -30,35 +32,50 @@ header {
       padding: 0.2rem;
       li {
         a {
+          text-transform: uppercase;
           text-decoration: none;
           color: white;
           font-size: 1.2rem;
           font-weight: 500;
-          transition: all 0.3s ease-in-out;
-          &:hover {
-            color: $primary-color-yellow;
-          }
         }
       }
     }
   }
 }
 
-@media (min-width: 768px) {
+@include mq($tablet) {
   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     .header-container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       .hamburger {
         display: none;
       }
     }
     nav {
-      display: block;
+      display: flex;
+      align-items: center;
       ul {
         flex-direction: row;
         justify-content: flex-end;
+        align-items: center;
+        padding: 0;
         li {
           a {
             font-size: 1.6rem;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              color: $primary-color-yellow;
+            }
+          }
+          &:last-child a {
+            margin-right: 2rem;
           }
         }
       }

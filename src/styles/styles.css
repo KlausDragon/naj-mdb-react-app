@@ -12,16 +12,17 @@ header.show nav {
 header .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header .header-container .hamburger {
   all: unset;
   font-size: 3rem;
-  margin: 0.1rem;
+  margin: 0.2rem 1rem;
   cursor: pointer;
 }
 header .header-container img {
   width: 60px;
-  margin: 0.5rem;
+  margin: 1rem 2rem;
 }
 header nav {
   display: none;
@@ -35,29 +36,47 @@ header nav ul {
   padding: 0.2rem;
 }
 header nav ul li a {
+  text-transform: uppercase;
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
   font-weight: 500;
-  transition: all 0.3s ease-in-out;
-}
-header nav ul li a:hover {
-  color: #ffc000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .header-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
   header .header-container .hamburger {
     display: none;
   }
   header nav {
-    display: block;
+    display: flex;
+    align-items: center;
   }
   header nav ul {
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
+    padding: 0;
   }
   header nav ul li a {
     font-size: 1.6rem;
+    transition: all 0.3s ease-in-out;
+  }
+  header nav ul li a:hover {
+    color: #ffc000;
+  }
+  header nav ul li:last-child a {
+    margin-right: 2rem;
   }
 }
 footer {
@@ -94,6 +113,73 @@ footer {
   .banner {
     padding: 10rem;
   }
+}
+.card {
+  background-color: #161616;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 185px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity as needed */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@media (min-width: 123.75em) {
+  .card:hover .overlay {
+    display: flex;
+    opacity: 1;
+  }
+}
+.title-and-release {
+  margin: 0 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem 0 0 0;
+}
+
+.releasedate {
+  font-size: 0.75rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.vote-average {
+  display: none;
+}
+
+.favorite {
+  display: none;
+}
+
+.about {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.about h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.about p {
+  font-size: 14px;
+  color: #666;
 }
 
 /*# sourceMappingURL=styles.css.map */
