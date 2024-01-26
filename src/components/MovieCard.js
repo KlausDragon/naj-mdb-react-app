@@ -2,6 +2,9 @@ import { IMAGE_URL_BASE } from "../utilities/api";
 import { formatReleaseDate } from "../utilities/toolbelt";
 import { useNavigate } from "react-router-dom";
 import FavouriteButton from "./FavoriteButton";
+import '../scss/_movieCard.scss';
+import { useState } from "react";
+
 
 const defaultData = {
   adult: false,
@@ -22,16 +25,37 @@ const defaultData = {
 };
 
 function MovieCard({ movieData = defaultData }) {
+  const [isMobileClick, setIsMobileClick] = useState(false);
   const imagePath = `${IMAGE_URL_BASE}/w185${movieData.poster_path}`;
   const navigate = useNavigate();
 
+  const handleDesktopClick = () => {
+    if(!isMobileClick) {
+      navigate(`/movie/${movieData.id}`);
+    }
+  };
+
+  const handleMobileClick = () => {
+    if (isMobileClick) {
+      setIsMobileClick(false);
+    } else {
+      setIsMobileClick(true);
+    }
+  };
+
   return (
-    <div
-      onClick={() => {
-        navigate(`/movie/${movieData.id}`);
-      }}
+    <div className="card"
+      onClick={handleDesktopClick}
+      onTouchStart={handleMobileClick}
     >
       <img src={imagePath} alt={movieData.title} />
+      <div className={`overlay ${isMobileClick ? 'visible' : ''}`}>
+        <div className="overlay-content">
+          <h3>{movieData.title}</h3>
+          <p>{formatReleaseDate(movieData.release_date)}</p>
+          <p>{movieData.vote_average.toFixed(1)}</p>
+        </div>
+      </div>
       <div className="title-and-release">
         <h3 className="title">{movieData.title}</h3>
         <h4 className="releasedate">

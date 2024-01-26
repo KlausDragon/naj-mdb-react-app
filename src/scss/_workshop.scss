@@ -1,0 +1,22 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.card {
+    background-color: #161616;
+    display: inline-block;
+    width: 185px;
+    
+}
+
+.title-and-release {
+    margin: 0 0 0 1rem;
+    
+}
+
+.releasedate {
+    font-size: 0.75rem;
+    margin: 1.5rem 0 1rem 0
+}
+
+
+

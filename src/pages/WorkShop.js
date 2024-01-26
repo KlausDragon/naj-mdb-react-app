@@ -7,6 +7,9 @@ function WorkShop() {
   return (
     <div>
       <h2>Workshop</h2>
+      <div className="card">
+      <MovieCard/>
+      </div>
 
 <Banner /> 
       
@@ -14,4 +17,7 @@ function WorkShop() {
   );
 }
 
+
 export default WorkShop;
+
+
