@@ -1,0 +1,7 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+    background-color: $background-color-black;
+    color: $primary-color-white;
+}
