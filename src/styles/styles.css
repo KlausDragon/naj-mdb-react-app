@@ -72,6 +72,10 @@ footer {
   margin: 0;
 }
 
+.banner-title {
+  color: yellow;
+}
+
 .banner {
   display: block;
   object-fit: cover;
@@ -80,7 +84,18 @@ footer {
   height: auto;
 }
 
-@media (min-width: em(1980)/16em) {
+@media (min-width: 48em) {
+  .banner-title {
+    color: pink;
+  }
+  .banner {
+    padding: 10rem;
+  }
+}
+@media (min-width: 123.75em) {
+  .banner-title {
+    color: orange;
+  }
   .banner {
     padding: 10rem;
   }

@@ -1,6 +1,9 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+.banner-title {
+    color: yellow;
+}
 .banner{
     display: block;
     object-fit: cover;
@@ -9,8 +12,22 @@
     height: auto;
 }
 
+@include mq($tablet) {
+    
+    .banner-title{
+        color: pink;
+    }
+    .banner{
+        padding: 10rem; 
+    }
+}
+
 
 @include mq($desktop) {
+    .banner-title{
+        color: orange;
+    }
+    
     .banner{
         padding: 10rem; 
     }

@@ -29,6 +29,7 @@ function Banner({movieId}) {
     <div className="banner">
       {movieData && (
         <>
+            <h1 className="banner-title">Jean test {movieData.title}</h1>
             <div className="banner-trailer">
               <iframe
                 src={`https://www.youtube.com/embed/${movieVideos[0].key}`}
