@@ -1,6 +1,5 @@
 import { useState } from "react";
-import MovieCard from "../components/MovieCard";
-import '../scss/_workshop.scss'
+import Banner from "../components/Banner";
 
 function WorkShop() {
   const [upcomingMovies, setUpcomingMovies] = useState([]);
@@ -11,6 +10,9 @@ function WorkShop() {
       <div className="card">
       <MovieCard/>
       </div>
+
+<Banner /> 
+      
     </div>
   );
 }

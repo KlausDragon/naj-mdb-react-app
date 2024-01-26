@@ -1,7 +1,70 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body {
   background-color: #000000;
-  color: #FFFFFF;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
+
+header.show nav {
+  display: block;
+}
+
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-container .hamburger {
+  all: unset;
+  font-size: 3rem;
+  margin: 0.1rem;
+  cursor: pointer;
+}
+header .header-container img {
+  width: 60px;
+  margin: 0.5rem;
+}
+header nav {
+  display: none;
+}
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  padding: 0.2rem;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+header nav ul li a:hover {
+  color: #ffc000;
+}
+
+@media (min-width: 768px) {
+  header .header-container .hamburger {
+    display: none;
+  }
+  header nav {
+    display: block;
+  }
+  header nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  header nav ul li a {
+    font-size: 1.6rem;
+  }
+}
+footer {
+  background-color: #161616;
+  text-align: center;
+  padding: 1px 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
