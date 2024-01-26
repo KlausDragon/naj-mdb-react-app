@@ -1,20 +1,12 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 9 | @use "about";
- *   | ^^^^^^^^^^^^
- *   '
- *   scss\styles.scss 9:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 9 \2502  @use \"about\";\a   \2502  ^^^^^^^^^^^^\a   \2575 \a   scss\\styles.scss 9:1  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
 }
+
+header.show nav {
+  display: block;
 }
 
 header .header-container {
@@ -121,6 +113,73 @@ footer {
   .banner {
     padding: 10rem;
   }
+}
+.card {
+  background-color: #161616;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 185px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity as needed */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@media (min-width: 123.75em) {
+  .card:hover .overlay {
+    display: flex;
+    opacity: 1;
+  }
+}
+.title-and-release {
+  margin: 0 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem 0 0 0;
+}
+
+.releasedate {
+  font-size: 0.75rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.vote-average {
+  display: none;
+}
+
+.favorite {
+  display: none;
+}
+
+.about {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.about h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.about p {
+  font-size: 14px;
+  color: #666;
 }
 
 /*# sourceMappingURL=styles.css.map */
