@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.banner{
+    display: block;
+    object-fit: cover;
+    min-height: 600px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+@include mq($desktop) {
+    .banner{
+        padding: 10rem; 
+    }
+}

@@ -26,11 +26,9 @@ function Banner({movieId}) {
   console.log("movieVideos", movieVideos);
 
   return (
-    <div className="movie-page">
+    <div className="banner">
       {movieData && (
         <>
-          <h1 className="banner-title">{movieData.title}</h1>
-
             <div className="banner-trailer">
               <iframe
                 src={`https://www.youtube.com/embed/${movieVideos[0].key}`}

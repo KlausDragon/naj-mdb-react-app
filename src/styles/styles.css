@@ -67,4 +67,18 @@ footer {
   margin: 0;
 }
 
+.banner {
+  display: block;
+  object-fit: cover;
+  min-height: 600px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: em(1980)/16em) {
+  .banner {
+    padding: 10rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
