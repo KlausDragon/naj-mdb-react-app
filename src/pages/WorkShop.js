@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Banner from "../components/Banner";
 
 function WorkShop() {
   const [upcomingMovies, setUpcomingMovies] = useState([]);
@@ -6,6 +7,9 @@ function WorkShop() {
   return (
     <div>
       <h2>Workshop</h2>
+
+<Banner /> 
+      
     </div>
   );
 }
