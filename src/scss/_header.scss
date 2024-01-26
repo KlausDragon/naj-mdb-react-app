@@ -46,7 +46,7 @@ header {
   }
 }
 
-@media (min-width: $tablet) {
+@include mq($tablet) {
   header {
     .header-container {
       align-items: center;

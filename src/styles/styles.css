@@ -46,7 +46,7 @@ header nav ul li a:hover {
   color: #ffc000;
 }
 
-@media (min-width: em(1024)) {
+@media (min-width: 48em) {
   header .header-container {
     align-items: center;
   }
