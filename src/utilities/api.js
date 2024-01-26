@@ -39,4 +39,27 @@ function getMovieById(movieId) {
     });
 }
 
-export { getPopularMovie, IMAGE_URL_BASE, getMovieById };
+function getTopRated() {
+  return fetch(
+    `${API_ENDPOINT}/movie/top_rated`, {
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${API_TOKEN}`,
+      },
+    }
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not OK");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      throw error;
+    });
+}
+
+
+
+
+export { getPopularMovie, IMAGE_URL_BASE, getMovieById, getTopRated };
