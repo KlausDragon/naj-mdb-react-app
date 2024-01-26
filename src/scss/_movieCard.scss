@@ -1,18 +1,24 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-
 .card {
-    background-color: #161616;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    width: 185px;
+  background-color: #161616;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 
-/* Additional styles for mobile devices */
-@media (max-width: 1023px) {
-    &.mobile-clicked .overlay {
+  /* Additional styles for devices with a minimum width of 1024px (non-mobile) */
+  @media (min-width: 1024px) {
+    &:hover .overlay {
+      display: flex;
+      opacity: 1;
+    }
+  }
+
+  /* Additional styles for mobile devices */
+  @media (max-width: 1023px) {
+    &:active .overlay {
       display: flex;
       opacity: 1;
     }
@@ -31,47 +37,43 @@
   }
 }
 
-
-
-
-
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity as needed */
-    display: none;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the overlay color and opacity as needed */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .title-and-release {
-    margin: 0 1rem 0 1rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 1rem 0 0 0;
-    
+  margin: 0 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .releasedate {
-    font-size: 0.75rem;
-    margin: 1.5rem 0 1rem 0
+  font-size: 0.75rem;
+  margin: 1.5rem 0 1rem 0;
 }
 
-.vote-average{
-    display: none;
+.vote-average {
+  display: none;
 }
 
-.favorite{
-    display: none;
-
+.favorite {
+  display: none;
 }
