@@ -44,7 +44,7 @@ function MovieCard({ movieData = defaultData }) {
   };
 
   return (
-    <div className="card"
+    <div className={`card ${isMobileClick ? 'mobile-clicked' : ''}`}
       onClick={handleDesktopClick}
       onTouchStart={handleMobileClick}
     >
