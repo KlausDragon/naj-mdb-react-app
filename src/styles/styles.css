@@ -43,4 +43,11 @@ nav ul li a:hover {
   color: #ffc000;
 }
 
+footer {
+  background-color: #161616;
+  text-align: center;
+  padding: 1px 0;
+  margin: 0;
+}
+
 /*# sourceMappingURL=styles.css.map */
