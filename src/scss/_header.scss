@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 header.show nav {
   display: block;
@@ -8,15 +9,16 @@ header {
   .header-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     .hamburger {
       all: unset;
       font-size: 3rem;
-      margin: 0.1rem;
+      margin: 0.2rem 1rem;
       cursor: pointer;
     }
     img {
       width: 60px;
-      margin: 0.5rem;
+      margin: 0.5rem 1rem;
     }
   }
   nav {
@@ -44,9 +46,10 @@ header {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
   header {
     .header-container {
+      align-items: center;
       .hamburger {
         display: none;
       }
@@ -56,6 +59,7 @@ header {
       ul {
         flex-direction: row;
         justify-content: flex-end;
+        align-items: center;
         li {
           a {
             font-size: 1.6rem;

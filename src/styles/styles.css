@@ -12,16 +12,17 @@ header.show nav {
 header .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header .header-container .hamburger {
   all: unset;
   font-size: 3rem;
-  margin: 0.1rem;
+  margin: 0.2rem 1rem;
   cursor: pointer;
 }
 header .header-container img {
   width: 60px;
-  margin: 0.5rem;
+  margin: 0.5rem 1rem;
 }
 header nav {
   display: none;
@@ -45,7 +46,10 @@ header nav ul li a:hover {
   color: #ffc000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: em(1024)) {
+  header .header-container {
+    align-items: center;
+  }
   header .header-container .hamburger {
     display: none;
   }
@@ -55,6 +59,7 @@ header nav ul li a:hover {
   header nav ul {
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
   }
   header nav ul li a {
     font-size: 1.6rem;

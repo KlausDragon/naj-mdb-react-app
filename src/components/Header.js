@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className={`header ${showNav ? "show" : ""}`}>
       <div className="header-container">
-        <img src={logo} alt="Naj Movie Logo" />
+        <a href="/"><img src={logo} alt="Naj Movie Logo" /></a>
         <button
           onClick={() => {
             setShowNav(!showNav);
