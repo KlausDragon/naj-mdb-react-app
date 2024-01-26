@@ -1,23 +1,21 @@
 @use "sass:math";
 
 //Font
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-$font: 'Inter', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+$font: "Inter", sans-serif;
 
 //Font Weight
-//light: 
+//light:
 //regular: 400
 //bold:
 
-
 // Colors
-$primary-color-white:#FFFFFF;
-$primary-color-yellow:#FFC000;
-$background-color-black:#000000;
-$background-color-grey:#161616;
+$primary-color-white: #ffffff;
+$primary-color-yellow: #ffc000;
+$background-color-black: #000000;
+$background-color-grey: #161616;
 
 //Responsive design
 $mobile: em(320);
 $tablet: em(1024);
 $desktop: em(1980);
-
