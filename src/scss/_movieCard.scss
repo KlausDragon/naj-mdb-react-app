@@ -7,34 +7,9 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  width: 185px;
 
-  /* Additional styles for devices with a minimum width of 1024px (non-mobile) */
-  @media (min-width: 1024px) {
-    &:hover .overlay {
-      display: flex;
-      opacity: 1;
-    }
-  }
 
-  /* Additional styles for mobile devices */
-  @media (max-width: 1023px) {
-    &:active .overlay {
-      display: flex;
-      opacity: 1;
-    }
-
-    &:hover .overlay {
-      display: none;
-    }
-  }
-
-  /* Additional styles for devices with a minimum width of 1024px (non-mobile) */
-  @media (min-width: 1024px) {
-    &:hover .overlay {
-      display: flex;
-      opacity: 1;
-    }
-  }
 }
 
 .overlay {
@@ -58,11 +33,19 @@
   transition: opacity 0.3s ease;
 }
 
+@media (min-width: $desktop){
+    .card:hover .overlay {
+        display: flex;
+        opacity: 1;
+      }
+}
+
 .title-and-release {
   margin: 0 0 0 1rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding: 1rem 0 0 0;
 }
 
 .releasedate {
