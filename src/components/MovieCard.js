@@ -2,6 +2,7 @@ import { IMAGE_URL_BASE } from "../utilities/api";
 import { formatReleaseDate } from "../utilities/toolbelt";
 import { useNavigate } from "react-router-dom";
 import FavouriteButton from "./FavoriteButton";
+import React, { useState } from 'react';
 
 
 
@@ -27,20 +28,22 @@ function MovieCard({ movieData = defaultData }) {
   const imagePath = `${IMAGE_URL_BASE}/w185${movieData.poster_path}`;
   const navigate = useNavigate();
 
+   // State to manage overlay visibility
+   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+
   const handleDesktopClick = (event) => {
     event.preventDefault();
     navigate(`/movie/${movieData.id}`);
   };
 
   const handleMobileClick = () => {
-    // Handle opening the overlay on mobile devices
-    // You can set a state to control the visibility of the overlay
-    console.log('Overlay opened on mobile click');
+    // Toggle the visibility of the overlay
+    setIsOverlayVisible(!isOverlayVisible);
   };
 
   const handleClick = (event) => {
     // Determine whether to use the desktop or mobile click handler
-    if (window.innerWidth <= 1023) {
+    if (window.innerWidth <= 768) {
       handleMobileClick();
     } else {
       handleDesktopClick(event);
@@ -50,9 +53,8 @@ function MovieCard({ movieData = defaultData }) {
   return (
     <div className="card" onClick={handleClick}>
       <img src={imagePath} alt={movieData.title} />
-      <div className="overlay">
+      <div className={`overlay ${isOverlayVisible ? 'visible' : ''}`}>
         <div className="overlay-content">
-          {/* Additional overlay content if needed */}
           <h3>{movieData.title}</h3>
           <p>{formatReleaseDate(movieData.release_date)}</p>
           <p>{movieData.vote_average.toFixed(1)}</p>
@@ -69,5 +71,7 @@ function MovieCard({ movieData = defaultData }) {
     </div>
   );
 }
+
+
 
 export default MovieCard;
