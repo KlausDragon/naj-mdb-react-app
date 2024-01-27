@@ -1,9 +1,10 @@
 @use "variables" as *;
 @use "mixins" as *;
 @use "defaults";
-
 @use "header";
 @use "footer";
 @use "banner";
 @use "movieCard";
 @use "about";
+@use "favorite";
+@use "filters";
