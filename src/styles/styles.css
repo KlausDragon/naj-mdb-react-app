@@ -167,19 +167,21 @@ footer {
 }
 
 .about {
-  background: #fff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 .about h1 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin: 2rem auto;
+  text-align: center;
 }
 .about p {
-  font-size: 14px;
-  color: #666;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,13 +1,16 @@
 import { NavLink } from "react-router-dom";
 
-function Nav() {
+function Nav({ setShowNav }) {
+  const closeNav = () => {
+    setShowNav(false);
+  };
   return (
     <nav>
       <ul>
-        <li>
+        <li onClick={closeNav}>
           <NavLink to="/favorite">Favorite</NavLink>
         </li>
-        <li>
+        <li onClick={closeNav}>
           <NavLink to="/about">About</NavLink>
         </li>
       </ul>
