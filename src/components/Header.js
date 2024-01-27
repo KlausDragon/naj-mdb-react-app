@@ -18,7 +18,7 @@ function Header() {
           ☰
         </button>
       </div>
-      <Nav />
+      <Nav showNav={showNav} setShowNav={setShowNav} />
     </header>
   );
 }
