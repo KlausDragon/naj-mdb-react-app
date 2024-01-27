@@ -41,6 +41,12 @@
 }
 
 
+  
+  .overlay.visible {
+    display: block; /* Show the overlay when the 'visible' class is present */
+  }
+
+
 
 .title-and-release {
   margin: 0 0 0 1rem;
