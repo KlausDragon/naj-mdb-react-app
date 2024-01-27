@@ -9,6 +9,7 @@ function PageHome() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
+  const [nowplayingMovies, setNowPlayingMovies] = useState([]);
 
 
 
