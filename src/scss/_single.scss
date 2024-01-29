@@ -1,0 +1,133 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+.single-page-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.single-title {
+    font-size: 1.2rem;
+    padding: 0 .5rem;
+}
+
+.single-date {
+    font-size: .8rem;
+    padding: .5rem;
+    font-weight: 400;
+}
+
+.single-rating-text {
+    color: $background-color-black;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 0;
+    vertical-align: middle;
+
+}
+
+.single-page-rating-bg {
+    background-color: $primary-color-yellow;
+    width: 4rem;
+    height: 2rem;
+    margin: 1rem .5rem 0rem .5rem;
+    border-radius: 120px 0px 0px/ 120px;
+}
+
+.single-page-poster-tablet {
+    display: none;
+}
+
+.single-trailer{
+    width: 100%;
+    height: 45vh;
+}
+
+
+.single-page-flex-poster-overview{
+    display: flex;
+    justify-content: space-between;
+}
+
+.single-page-poster-mobile {
+    width: 30%;
+    height: auto;
+}
+
+.single-page-overview {
+    width: 80%;
+    font-size: .5rem;
+}
+
+.single-page-button {
+    width: 5rem;
+    height: 5rem;
+}
+
+.favorite {
+    display: block;
+    background-color: $primary-color-yellow;
+    color: $background-color-black;
+    border: none;
+    border-radius: .2rem;
+}
+
+.favorite.favorited {
+    color: red;
+}
+
+
+@include mq($tablet) {
+    .single-title {
+        font-size: 3rem;
+        padding: 0rem 1rem;
+    }
+    
+    .single-date {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+
+    }
+    
+    .single-rating-text {
+        font-size: 1.7rem;
+
+    }
+    
+    .single-page-rating-bg {
+        width: 6.5rem;
+        height: 3rem;
+        margin: 1rem 1rem 0rem .5rem;
+    }
+    
+    .single-page-flex-poster-trailer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .single-page-poster-tablet {
+        display: block;
+        width: 25%;
+        height: auto;
+        margin: 0rem 1rem;
+    }
+
+    .single-trailer{
+        width:70%;
+        height: auto;
+        margin: 0rem 1rem 0 0;
+    }
+
+    .single-page-poster-mobile {
+       display: none;
+    }
+
+    .single-page-overview {
+        width: 80%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+}

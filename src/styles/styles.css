@@ -86,34 +86,11 @@ footer {
   margin: 0;
 }
 
-.banner-title {
-  color: yellow;
+.home-banner-trailer {
+  width: 100%;
+  height: 50vh;
 }
 
-.banner {
-  display: block;
-  object-fit: cover;
-  min-height: 600px;
-  max-width: 100%;
-  height: auto;
-}
-
-@media (min-width: 48em) {
-  .banner-title {
-    color: pink;
-  }
-  .banner {
-    padding: 10rem;
-  }
-}
-@media (min-width: 123.75em) {
-  .banner-title {
-    color: orange;
-  }
-  .banner {
-    padding: 10rem;
-  }
-}
 .card {
   background-color: #161616;
   display: inline-block;
@@ -209,6 +186,122 @@ footer {
   max-width: 700px;
   margin: 4rem auto;
   padding: 0 2.5rem;
+}
+
+.single-page-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-title {
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+}
+
+.single-date {
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  font-weight: 400;
+}
+
+.single-rating-text {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.single-page-rating-bg {
+  background-color: #ffc000;
+  width: 4rem;
+  height: 2rem;
+  margin: 1rem 0.5rem 0rem 0.5rem;
+  border-radius: 120px 0px 0px/120px;
+}
+
+.single-page-poster-tablet {
+  display: none;
+}
+
+.single-trailer {
+  width: 100%;
+  height: 45vh;
+}
+
+.single-page-flex-poster-overview {
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-page-poster-mobile {
+  width: 30%;
+  height: auto;
+}
+
+.single-page-overview {
+  width: 80%;
+  font-size: 0.5rem;
+}
+
+.single-page-button {
+  width: 5rem;
+  height: 5rem;
+}
+
+.favorite {
+  display: block;
+  background-color: #ffc000;
+  color: #000000;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.favorite.favorited {
+  color: red;
+}
+
+@media (min-width: 48em) {
+  .single-title {
+    font-size: 3rem;
+    padding: 0rem 1rem;
+  }
+  .single-date {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .single-rating-text {
+    font-size: 1.7rem;
+  }
+  .single-page-rating-bg {
+    width: 6.5rem;
+    height: 3rem;
+    margin: 1rem 1rem 0rem 0.5rem;
+  }
+  .single-page-flex-poster-trailer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .single-page-poster-tablet {
+    display: block;
+    width: 25%;
+    height: auto;
+    margin: 0rem 1rem;
+  }
+  .single-trailer {
+    width: 70%;
+    height: auto;
+    margin: 0rem 1rem 0 0;
+  }
+  .single-page-poster-mobile {
+    display: none;
+  }
+  .single-page-overview {
+    width: 80%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
