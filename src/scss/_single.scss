@@ -2,9 +2,14 @@
 @use "mixins" as *;
 
 
+.single-page-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
 .single-title {
     font-size: 1.2rem;
-    padding: .5rem;
+    padding: 0 .5rem;
 }
 
 .single-date {
@@ -17,50 +22,53 @@
     color: $background-color-black;
     font-size: 1rem;
     font-weight: 500;
+    text-align: center;
+    line-height: 0;
+    vertical-align: middle;
+
 }
 
-.single-page-rating {
+.single-page-rating-bg {
     background-color: $primary-color-yellow;
-    width: 2.5rem;
-    padding: .05rem 1rem;
-    margin: .5rem;
-    border-radius: 30% 0 0 0;
+    width: 4rem;
+    height: 2rem;
+    margin: 1rem .5rem 0rem .5rem;
+    border-radius: 120px 0px 0px/ 120px;
 }
 
 .single-trailer{
     width:100%;
     height: 45vh;
+    margin: 0.5rem;
 }
 
 @include mq($tablet) {
     .single-title {
         font-size: 3rem;
-        padding: .5rem;
+        padding: 0rem 1rem;
     }
     
     .single-date {
         font-size: 1rem;
-        padding: .5rem;
-        font-weight: 400;
+        padding: 0.5rem 1rem;
+
     }
     
     .single-rating-text {
-        color: $background-color-black;
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-size: 1.7rem;
+
     }
     
-    .single-page-rating {
-        background-color: $primary-color-yellow;
-        width: 3rem;
-        padding: .05rem 2rem;
-        margin: .5rem;
-        border-radius: 30% 0 0 0;
+    .single-page-rating-bg {
+        width: 6.5rem;
+        height: 3rem;
+        margin: 1rem 1rem 0rem .5rem;
     }
     
     .single-trailer{
         width:70%;
         height: 45vh;
+        margin: 0.5rem 1rem;
     }
 
 }

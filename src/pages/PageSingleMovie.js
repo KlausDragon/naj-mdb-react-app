@@ -33,16 +33,19 @@ function PageSingleMovie() {
     <div className="single-page">
       {movieData && (
         <div>
-          <div>
-            <h1 className="single-title">{movieData.title}</h1>
-          </div>
-          <div>
-            <h2 className="single-date">{formatReleaseDate(movieData.release_date)}</h2>
+          <div className="single-page-flex">
+            <div>
+              <h1 className="single-title">{movieData.title}</h1>
+              <h2 className="single-date">{formatReleaseDate(movieData.release_date)}</h2>
+            </div>
+
+            <div className="single-page-rating-bg">
+              <p className="single-rating-text">{movieData.vote_average ? ( <p>{movieData.vote_average.toFixed(1).replace(".", "")}%</p> ) : ( <p>NR</p> )}</p>
+            </div>
           </div>
 
-          <div className="single-page-rating">
-            <p className="single-rating-text">{movieData.vote_average ? ( <p>{movieData.vote_average.toFixed(1).replace(".", "")}%</p> ) : ( <p>NR</p> )}</p>
-          </div>
+
+
 
             <div className="single-page-trailer">
               <iframe
