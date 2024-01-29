@@ -1,0 +1,66 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+.single-title {
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.single-date {
+    font-size: .8rem;
+    padding: .5rem;
+    font-weight: 400;
+}
+
+.single-rating-text {
+    color: $background-color-black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.single-page-rating {
+    background-color: $primary-color-yellow;
+    width: 2.5rem;
+    padding: .05rem 1rem;
+    margin: .5rem;
+    border-radius: 30% 0 0 0;
+}
+
+.single-trailer{
+    width:100%;
+    height: 45vh;
+}
+
+@include mq($tablet) {
+    .single-title {
+        font-size: 3rem;
+        padding: .5rem;
+    }
+    
+    .single-date {
+        font-size: 1rem;
+        padding: .5rem;
+        font-weight: 400;
+    }
+    
+    .single-rating-text {
+        color: $background-color-black;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .single-page-rating {
+        background-color: $primary-color-yellow;
+        width: 3rem;
+        padding: .05rem 2rem;
+        margin: .5rem;
+        border-radius: 30% 0 0 0;
+    }
+    
+    .single-trailer{
+        width:70%;
+        height: 45vh;
+    }
+
+}
