@@ -4,13 +4,14 @@ import { useEffect } from "react";
 import MoviesContainer from "../components/MoviesContainer";
 import Banner from "../components/Banner";
 import { getTopRated } from "../utilities/api";
+import Categories from "../components/Categories";
 
 function PageHome() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [nowplayingMovies, setNowPlayingMovies] = useState([]);
-
+  const [currentSelectedCategory, setCurrentSelectedCategory] = useState('Popular');
 
 
   useEffect(() => {
@@ -36,13 +37,26 @@ function PageHome() {
 
   return (
     <main id="home">
-      {/* MovieID={popularMovies[0].id} */}
-      {popularMovies.length > 0 &&
-      <Banner
-      movieId={popularMovies[0].id} />}
 
+
+      {popularMovies.length > 0 && (
+        <>     
+
+         <Banner
+      movieId={popularMovies[0].id} />
+
+        <Categories currentSelectedCategory={currentSelectedCategory} setCurrentSelectedCategory={setCurrentSelectedCategory}/>
+
+{currentSelectedCategory === "Popular" && 
       <MoviesContainer title="Popular Movies" moviesData={popularMovies} />
+}
 
+{currentSelectedCategory === "Top Rated" && 
+      <MoviesContainer title="Top Rated Movies" moviesData={topRatedMovies} />
+}
+
+      </>
+)}
     </main>
   );
 }
