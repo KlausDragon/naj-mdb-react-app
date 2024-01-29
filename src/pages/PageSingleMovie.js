@@ -44,10 +44,13 @@ function PageSingleMovie() {
             </div>
           </div>
 
-
-
-
-            <div className="single-page-trailer">
+            <div className="single-page-flex-poster-trailer">
+              <img
+                className="single-page-poster-tablet"
+                src={`${IMAGE_URL_BASE}/w500/${movieData.poster_path}`}
+                alt={`${movieData.title}`}
+              />
+              
               <iframe
                 src={`https://www.youtube.com/embed/${movieVideos[0].key}`}
                 // width="300"
@@ -57,19 +60,19 @@ function PageSingleMovie() {
               ></iframe>
             </div>
 
-          <div>
+          <div className="single-page-flex-poster-overview">
               <img
-                className="single-page-poster"
-                src={`${IMAGE_URL_BASE}/w200/${movieData.poster_path}`}
+                className="single-page-poster-mobile"
+                src={`${IMAGE_URL_BASE}/w500/${movieData.poster_path}`}
                 alt={`${movieData.title}`}
               />
+              
+              <div className="single-page-overview-bg">
+                  <p className="single-page-overview">{movieData.overview}</p>
+              </div>
           </div>
 
-          <div>
-              <p>{movieData.overview}</p>
-          </div>
-
-          <div>
+          <div className="single-page-button">
           <FavouriteButton movieData={movieData} />
           </div>
 

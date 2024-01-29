@@ -199,10 +199,45 @@ footer {
   border-radius: 120px 0px 0px/120px;
 }
 
+.single-page-poster-tablet {
+  display: none;
+}
+
 .single-trailer {
   width: 100%;
   height: 45vh;
-  margin: 0.5rem;
+}
+
+.single-page-flex-poster-overview {
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-page-poster-mobile {
+  width: 30%;
+  height: auto;
+}
+
+.single-page-overview {
+  width: 80%;
+  font-size: 0.5rem;
+}
+
+.single-page-button {
+  width: 5rem;
+  height: 5rem;
+}
+
+.favorite {
+  display: block;
+  background-color: #ffc000;
+  color: #000000;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.favorite.favorited {
+  color: red;
 }
 
 @media (min-width: 48em) {
@@ -222,10 +257,28 @@ footer {
     height: 3rem;
     margin: 1rem 1rem 0rem 0.5rem;
   }
+  .single-page-flex-poster-trailer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .single-page-poster-tablet {
+    display: block;
+    width: 25%;
+    height: auto;
+    margin: 0rem 1rem;
+  }
   .single-trailer {
     width: 70%;
-    height: 45vh;
-    margin: 0.5rem 1rem;
+    height: auto;
+    margin: 0rem 1rem 0 0;
+  }
+  .single-page-poster-mobile {
+    display: none;
+  }
+  .single-page-overview {
+    width: 80%;
+    font-size: 1rem;
+    padding: 1rem;
   }
 }
 
