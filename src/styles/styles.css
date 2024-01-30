@@ -89,6 +89,7 @@ footer {
 .home-banner-trailer {
   width: 100%;
   height: 50vh;
+  border: none;
 }
 
 .card {
@@ -228,6 +229,7 @@ footer {
 .single-trailer {
   width: 100%;
   height: 45vh;
+  border: none;
 }
 
 .single-page-flex-poster-overview {
