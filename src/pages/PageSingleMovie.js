@@ -5,12 +5,19 @@ import { useEffect } from "react";
 import { filterVideos, formatReleaseDate } from "../utilities/toolbelt";
 import { IMAGE_URL_BASE } from "../utilities/api";
 import FavouriteButton from "../components/FavoriteButton";
+import { GlobalContext } from "../context/GlobalContext";
+import { useContext } from "react";
+
 
 function PageSingleMovie() {
+ 
+
+
   const params = useParams();
   const id = params.id;
   const [movieData, setMovieData] = useState();
   const [movieVideos, setMovieVideos] = useState([]);
+
 
   useEffect(() => {
     getMovieById(id)
@@ -29,6 +36,27 @@ function PageSingleMovie() {
   // console.log("movieData", movieData);
   // console.log("movieVideos", movieVideos);
 
+
+  const { favorites, addToFavorites, removeFromFavorites } =
+    useContext(GlobalContext);
+
+
+  const isFavorited = favorites.find((fav) => {
+    
+    return fav.id == id;
+  });
+
+
+  function handleFavorite(event) {
+    event.stopPropagation();
+    if (isFavorited) {
+      removeFromFavorites(movieData);
+    } else {
+      addToFavorites(movieData);
+    }
+  }
+
+  
   return (
     <div className="single-page">
       {movieData && (
@@ -72,7 +100,10 @@ function PageSingleMovie() {
               </div>
           </div>
 
-          <div className="single-page-button">
+          <div className="single-page-button" onClick={handleFavorite} 
+               
+
+           >
               <FavouriteButton movieData={movieData} />
               <p className="single-page-button-text">Add to Favorites</p>
           </div>

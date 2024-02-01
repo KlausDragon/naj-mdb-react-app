@@ -13,7 +13,9 @@ function Categories({currentSelectedCategory , setCurrentSelectedCategory}) {
     setCurrentSelectedCategory("Top Rated")
 }}>Top Rated</button>
 
-<button>Upcoming</button>
+<button onClick={() => {
+    setCurrentSelectedCategory("Upcoming")
+}}>Upcoming</button>
 <button>Now Playing</button>
         </div>
     )

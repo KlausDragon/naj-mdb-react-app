@@ -6,6 +6,8 @@ function FavouriteButton({ movieData }) {
     useContext(GlobalContext);
 
   const isFavorited = favorites.find((fav) => {
+
+    console.log(fav)
     return fav.id === movieData.id;
   });
 

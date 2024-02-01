@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { getPopularMovie } from "../utilities/api";
+import { getPopularMovie, getUpcoming,getTopRated } from "../utilities/api";
 import { useEffect } from "react";
 import MoviesContainer from "../components/MoviesContainer";
 import Banner from "../components/Banner";
-import { getTopRated } from "../utilities/api";
 import Categories from "../components/Categories";
 
 function PageHome() {
@@ -30,6 +29,14 @@ function PageHome() {
       .catch((error) => {
         console.log(error);
       });
+    
+    getUpcoming()
+    .then((data) => {
+      setUpcomingMovies(data.results);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }, []);
 
   console.log(popularMovies);
@@ -53,6 +60,11 @@ function PageHome() {
 
 {currentSelectedCategory === "Top Rated" && 
       <MoviesContainer title="Top Rated Movies" moviesData={topRatedMovies} />
+}
+
+
+{currentSelectedCategory === "Upcoming" && 
+      <MoviesContainer title="Upcoming Movies" moviesData={upcomingMovies} />
 }
 
       </>
