@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../scss/_movieCard.scss';
 
 
 
@@ -13,7 +14,7 @@ function MoreInfo({ movieData }) {
     };
 
   return (
-    <button className="more-info" onClick={handleClick}>
+    <button className='more-info' onClick={handleClick}>
       <p>More Info</p>
     </button>
   );

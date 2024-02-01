@@ -62,8 +62,8 @@ function MovieCard({ movieData }) {
           <FavouriteButton movieData={movieData} />
           </div>
 
-          <div className="single-page-overview-bg">
-              <p className="single-page-overview">{formatText(movieData.overview)}</p>
+          <div >
+              <p className="movie-card-overview">{formatText(movieData.overview)}</p>
           </div>
 
           <div> 
