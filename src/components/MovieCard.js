@@ -1,8 +1,9 @@
 import { IMAGE_URL_BASE } from "../utilities/api";
-import { formatReleaseDate } from "../utilities/toolbelt";
+import { formatText, formatReleaseDate} from "../utilities/toolbelt";
 import { useNavigate } from "react-router-dom";
 import FavouriteButton from "./FavoriteButton";
 import React, { useState } from 'react';
+import MoreInfo from "./MoreInfo";
 
 
 
@@ -52,18 +53,22 @@ function MovieCard({ movieData }) {
       <img src={imagePath} alt={movieData.title} />
       <div className={`overlay ${isOverlayVisible ? 'visible' : ''}`}>
         <div className="overlay-content">
-          <h3>{movieData.title}</h3>
-          <p>{formatReleaseDate(movieData.release_date)}</p>
-          
           
           <div className="vote-container">
             <p className="vote-average">{movieData.vote_average.toFixed(1)}</p>
           </div>
-        </div>
 
-        
-        <div className="favorite-button-container">
+          <div className="favorite-button-container">
           <FavouriteButton movieData={movieData} />
+          </div>
+
+          <div className="single-page-overview-bg">
+              <p className="single-page-overview">{formatText(movieData.overview)}</p>
+          </div>
+
+          <div> 
+            <MoreInfo movieData={movieData} />
+          </div>
         </div>
       </div>
       <div className="title-and-release">
