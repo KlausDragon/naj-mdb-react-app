@@ -89,6 +89,7 @@ footer {
 .home-banner-trailer {
   width: 100%;
   height: 50vh;
+  border: none;
 }
 
 .card {
@@ -228,6 +229,7 @@ footer {
 .single-trailer {
   width: 100%;
   height: 45vh;
+  border: none;
 }
 
 .single-page-flex-poster-overview {
@@ -236,17 +238,29 @@ footer {
 }
 
 .single-page-poster-mobile {
-  width: 30%;
+  width: 35%;
   height: auto;
 }
 
 .single-page-overview {
-  width: 80%;
+  font-size: 0.6rem;
+  width: 90%;
 }
 
 .single-page-button {
-  width: 5rem;
-  height: 5rem;
+  display: flex;
+  background-color: #ffc000;
+  width: 95%;
+  height: 10vh;
+  border-radius: 0.3rem;
+  margin: 0.5rem;
+}
+
+.single-page-button-text {
+  color: #000000;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1rem;
 }
 
 .favorite {
@@ -255,6 +269,9 @@ footer {
   color: #000000;
   border: none;
   border-radius: 0.2rem;
+  width: 3rem;
+  padding: 0.5rem;
+  margin: 0.3rem 0 0 0.5rem;
 }
 
 .favorite.favorited {

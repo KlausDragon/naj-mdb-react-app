@@ -73,7 +73,8 @@ function PageSingleMovie() {
           </div>
 
           <div className="single-page-button">
-          <FavouriteButton movieData={movieData} />
+              <FavouriteButton movieData={movieData} />
+              <p className="single-page-button-text">Add to Favorites</p>
           </div>
 
         </div>

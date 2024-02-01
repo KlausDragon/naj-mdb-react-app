@@ -43,6 +43,7 @@
 .single-trailer{
     width: 100%;
     height: 45vh;
+    border: none;
 }
 
 
@@ -52,18 +53,29 @@
 }
 
 .single-page-poster-mobile {
-    width: 30%;
+    width: 35%;
     height: auto;
 }
 
 .single-page-overview {
-    width: 80%;
-    font-size: .5rem;
+    font-size: .6rem;
+    width: 90%;
 }
 
 .single-page-button {
-    width: 5rem;
-    height: 5rem;
+    display: flex;
+    background-color: $primary-color-yellow;
+    width: 95%;
+    height: 10vh;
+    border-radius: .3rem;
+    margin: .5rem;
+}
+
+.single-page-button-text {
+    color: $background-color-black;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1rem;
 }
 
 .favorite {
@@ -72,6 +84,9 @@
     color: $background-color-black;
     border: none;
     border-radius: .2rem;
+    width: 3rem;
+    padding: .5rem;
+    margin: .3rem 0 0 .5rem;
 }
 
 .favorite.favorited {
