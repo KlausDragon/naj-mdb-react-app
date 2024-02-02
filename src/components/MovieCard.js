@@ -50,12 +50,12 @@ function MovieCard({ movieData }) {
 
   return (
     <div className="card" onClick={handleClick}>
-      <img src={imagePath} alt={movieData.title} />
+      <img src={`${IMAGE_URL_BASE}/w500/${movieData.poster_path}`} alt={movieData.title} />
       <div className={`overlay ${isOverlayVisible ? 'visible' : ''}`}>
         <div className="overlay-content">
           
           <div className="vote-container">
-            <p className="vote-average">{movieData.vote_average.toFixed(1)}</p>
+            <p className="vote-average">{movieData.vote_average.toFixed(1).replace(".", "")}%</p>
           </div>
 
           <div className="favorite-button-container">

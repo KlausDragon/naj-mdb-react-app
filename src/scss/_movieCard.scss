@@ -7,7 +7,11 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  width: 185px;
+  width: 296px;
+
+  img {
+    width: 296px;
+  }
 
   .overlay {
     position: absolute;
@@ -34,6 +38,7 @@
 
   .vote-average {
     background-color: #FFC000; 
+    color: #000000;
     padding: 8px; 
     border-radius: 4px;
     position: absolute;

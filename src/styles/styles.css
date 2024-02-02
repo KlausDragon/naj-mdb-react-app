@@ -98,7 +98,10 @@ footer {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  width: 185px;
+  width: 296px;
+}
+.card img {
+  width: 296px;
 }
 .card .overlay {
   position: absolute;
@@ -121,6 +124,7 @@ footer {
 }
 .card .vote-average {
   background-color: #FFC000;
+  color: #000000;
   padding: 8px;
   border-radius: 4px;
   position: absolute;
@@ -331,6 +335,17 @@ footer {
     width: 80%;
     font-size: 1rem;
     padding: 1rem;
+  }
+}
+.movies-container {
+  justify-content: center;
+}
+.movies-container h2 {
+  display: none;
+}
+@media (min-width: 48em) {
+  .movies-container h2 {
+    display: block;
   }
 }
 
