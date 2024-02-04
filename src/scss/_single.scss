@@ -2,7 +2,7 @@
 @use "mixins" as *;
 
 
-.single-page-flex{
+.single-page-flex {
     display: flex;
     justify-content: space-between;
 }
@@ -46,8 +46,7 @@
     border: none;
 }
 
-
-.single-page-flex-poster-overview{
+.single-page-flex-poster-overview {
     display: flex;
     justify-content: space-between;
 }
@@ -55,10 +54,11 @@
 .single-page-poster-mobile {
     width: 35%;
     height: auto;
+    margin: 0 0 0 .5rem;
 }
 
 .single-page-genru-text {
-    font-size: .5rem;
+    font-size: .5em;
     margin: .1rem .5rem;
 }
 
@@ -70,20 +70,21 @@
 
 .single-page-genru-flex {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 1rem;
+    margin: 1rem .1rem;
 
 }
 
 .single-page-overview-text {
-    font-size: .5rem;
-    width: 70%;
+    font-size: .5em;
+    width: 80%;
     margin: 0 auto;
 
 }
 
-.single-page-overview-genru-bg {
-
+.single-page-button-tablet {
+    display: none;
 }
 
 .single-page-button {
@@ -92,7 +93,7 @@
     width: 95%;
     height: 8vh;
     border-radius: .3rem;
-    margin: .5rem;
+    margin: 1rem .5rem;
 }
 
 .single-page-button-text {
@@ -113,12 +114,33 @@
     margin: .3rem 0 0 .5rem;
 }
 
-.favorite.favorited {
 
+@include mq($tablet-small) {
+
+    .single-page-genru-text {
+        font-size: 1rem;
+        margin: .2rem .7rem;
+    }
+
+    .single-page-genru-bg {
+        border: thin solid gray;
+        border-radius: 30px;
+        margin: .2rem;
+    }
+
+    .single-page-genru-flex {
+        margin: .8rem .1rem 1.2rem;
+    }
+
+    .single-page-overview-text {
+        font-size: .8em;
+        line-height: 1.1rem;
+    }
 }
 
 
 @include mq($tablet) {
+
     .single-title {
         font-size: 3rem;
         padding: 0rem 1rem;
@@ -127,12 +149,10 @@
     .single-date {
         font-size: 1rem;
         padding: 0.5rem 1rem;
-
     }
     
     .single-rating-text {
         font-size: 1.7rem;
-
     }
     
     .single-page-rating-bg {
@@ -144,6 +164,7 @@
     .single-page-flex-poster-trailer {
         display: flex;
         justify-content: space-between;
+        position: relative;
     }
 
     .single-page-poster-tablet {
@@ -151,6 +172,19 @@
         width: 25%;
         height: auto;
         margin: 0rem 1rem;
+    }
+
+    .single-page-button-tablet {
+        display: block;
+    }
+
+    .favorite {
+        display: block;
+        width: 2.3rem;
+        position: absolute;
+        top: -0.3rem;
+        left: 0.5rem;
+        z-index: 999;
     }
 
     .single-trailer{
@@ -175,22 +209,93 @@
     .single-page-genru-flex {
         display: flex;
         justify-content: left;
-        margin: 0.5rem 0 0.5rem 1rem;
-    
+        margin: 1.5rem 0 1rem 1rem;
     }
 
     .single-page-overview-text {
-        width: 80%;
+        width: 95%;
         font-size: 1rem;
-        margin: 0 0 1rem 1.5rem;
+        margin: 0 0 2rem 1.5rem;
+        line-height: 1.5rem;
     }
 
-    .single-page-button-text {
+    .single-page-button-text, 
+    .single-page-button {
         display: none;
     }
 
-    .single-page-button {
-        display: block;
-        background-color:gray;
+
+}
+
+
+@include mq($desktop) {
+
+    .single-title {
+        font-size: 4rem;
+        padding: 0rem 2rem;
     }
+    
+    .single-date {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+    }
+    
+    .single-rating-text {
+        font-size: 2.5rem;
+    }
+    
+    .single-page-rating-bg {
+        width: 8.5rem;
+        height: 4.5rem;
+        margin: 1rem 2rem 0rem .5rem;
+    }
+
+    .single-page-poster-tablet {
+        display: block;
+        width: 25%;
+        height: auto;
+        margin: 0rem 0rem 0rem 2rem;
+    }
+
+    .favorite {
+        display: block;
+        width: 5rem;
+        top: -0.3rem;
+        left: 1.5rem;
+    }
+
+    .single-trailer{
+        width:70%;
+        height: auto;
+        margin: 0rem 2rem 0 0;
+    }
+
+    .single-page-genru-text {
+        font-size: 2rem;
+        margin: .5rem 1rem;
+    }
+    
+    .single-page-genru-bg {
+        margin: 1rem;
+    }
+    
+    .single-page-genru-flex {
+        display: flex;
+        justify-content: left;
+        margin: 1.5rem 0 1rem 1rem;
+    }
+
+    .single-page-overview-text {
+        width: 95%;
+        font-size: 2rem;
+        margin: 0 0 4rem 2.5rem;
+        line-height: 4rem;
+    }
+
+    .single-page-button-text, 
+    .single-page-button {
+        display: none;
+    }
+
+
 }

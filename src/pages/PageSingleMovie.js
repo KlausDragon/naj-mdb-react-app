@@ -75,6 +75,10 @@ function PageSingleMovie() {
                 src={`${IMAGE_URL_BASE}/w500/${movieData.poster_path}`}
                 alt={`${movieData.title}`}
               />
+
+              <div className="single-page-button-tablet" onClick={handleFavorite} >
+                <FavouriteButton movieData={movieData} />
+              </div>
               
               <iframe
                 src={`https://www.youtube.com/embed/${movieVideos[0].key}`}
