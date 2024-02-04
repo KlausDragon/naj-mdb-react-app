@@ -57,16 +57,40 @@
     height: auto;
 }
 
-.single-page-overview {
-    font-size: .6rem;
-    width: 90%;
+.single-page-genru-text {
+    font-size: .5rem;
+    margin: .1rem .5rem;
+}
+
+.single-page-genru-bg {
+    border: thin solid gray;
+    border-radius: 30px;
+    margin: .2rem;
+}
+
+.single-page-genru-flex {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+
+}
+
+.single-page-overview-text {
+    font-size: .5rem;
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.single-page-overview-genru-bg {
+
 }
 
 .single-page-button {
     display: flex;
     background-color: $primary-color-yellow;
     width: 95%;
-    height: 10vh;
+    height: 8vh;
     border-radius: .3rem;
     margin: .5rem;
 }
@@ -75,7 +99,7 @@
     color: $background-color-black;
     font-weight: 500;
     font-size: 1.3rem;
-    line-height: 1rem;
+    margin: auto 0;
 }
 
 .favorite {
@@ -90,7 +114,7 @@
 }
 
 .favorite.favorited {
-    color: red;
+
 }
 
 
@@ -139,10 +163,34 @@
        display: none;
     }
 
-    .single-page-overview {
-        width: 80%;
+    .single-page-genru-text {
         font-size: 1rem;
-        padding: 1rem;
+        margin: .1rem .5rem;
+    }
+    
+    .single-page-genru-bg {
+        margin: .5rem;
+    }
+    
+    .single-page-genru-flex {
+        display: flex;
+        justify-content: left;
+        margin: 0.5rem 0 0.5rem 1rem;
+    
     }
 
+    .single-page-overview-text {
+        width: 80%;
+        font-size: 1rem;
+        margin: 0 0 1rem 1.5rem;
+    }
+
+    .single-page-button-text {
+        display: none;
+    }
+
+    .single-page-button {
+        display: block;
+        background-color:gray;
+    }
 }

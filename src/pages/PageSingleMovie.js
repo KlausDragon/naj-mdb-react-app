@@ -11,13 +11,10 @@ import { useContext } from "react";
 
 function PageSingleMovie() {
  
-
-
   const params = useParams();
   const id = params.id;
   const [movieData, setMovieData] = useState();
   const [movieVideos, setMovieVideos] = useState([]);
-
 
   useEffect(() => {
     getMovieById(id)
@@ -94,16 +91,25 @@ function PageSingleMovie() {
                 src={`${IMAGE_URL_BASE}/w500/${movieData.poster_path}`}
                 alt={`${movieData.title}`}
               />
-              
-              <div className="single-page-overview-bg">
-                  <p className="single-page-overview">{movieData.overview}</p>
+
+              <div className="single-page-overview-genru-bg">
+
+                <div className="single-page-genru-flex">
+                  {movieData.genres.map((genre) => {
+                  return <div className="single-page-genru-bg">
+                    <p className="single-page-genru-text">{genre.name}</p>
+                    </div>
+                  })}
+                </div>
+
+                <div className="single-page-overview-bg">
+                  <p className="single-page-overview-text">{movieData.overview}</p>
+                </div>
+
               </div>
           </div>
 
-          <div className="single-page-button" onClick={handleFavorite} 
-               
-
-           >
+          <div className="single-page-button" onClick={handleFavorite} >
               <FavouriteButton movieData={movieData} />
               <p className="single-page-button-text">Add to Favorites</p>
           </div>
