@@ -103,6 +103,7 @@
   .favorite.favorited:active {
     border-radius: 4px;
     border-style: none;
+    cursor: pointer;
     
   }
   //End Favorite button section
@@ -110,7 +111,7 @@
   .movie-card-overview{
     font-size: 1rem;
     display: flex;
-    margin: 2rem 5rem 2rem 5rem;
+    margin: 2rem 4rem 2rem 4rem;
     text-align: left;
   }
 
@@ -124,6 +125,11 @@
     padding: 0.05rem 1rem;
     font-size: 1rem;
     cursor: pointer;
+  }
+
+  .more-info:hover {
+    background-color: #FFC000;
+    color: #ffffff;
   }
 
   

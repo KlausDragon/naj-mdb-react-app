@@ -80,10 +80,16 @@ header nav ul li a {
   }
 }
 footer {
+  display: flex;
   background-color: #161616;
-  text-align: center;
   padding: 1px 0;
   margin: 0;
+  flex-direction: column;
+  align-items: center;
+}
+footer img {
+  width: 2rem;
+  padding: 1rem 0 0 0;
 }
 
 .home-banner-trailer {
@@ -175,11 +181,12 @@ footer {
 .card .favorite.favorited:active {
   border-radius: 4px;
   border-style: none;
+  cursor: pointer;
 }
 .card .movie-card-overview {
   font-size: 1rem;
   display: flex;
-  margin: 2rem 5rem 2rem 5rem;
+  margin: 2rem 4rem 2rem 4rem;
   text-align: left;
 }
 .card .more-info {
@@ -190,6 +197,10 @@ footer {
   padding: 0.05rem 1rem;
   font-size: 1rem;
   cursor: pointer;
+}
+.card .more-info:hover {
+  background-color: #FFC000;
+  color: #ffffff;
 }
 
 .about {

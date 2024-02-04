@@ -26,7 +26,6 @@ import MoreInfo from "./MoreInfo";
 // };
 
 function MovieCard({ movieData }) {
-  const imagePath = `${IMAGE_URL_BASE}/w185${movieData.poster_path}`;
   const navigate = useNavigate();
 
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);

@@ -1,7 +1,11 @@
+import logo from "../naj-movie-logo.svg";
+
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer>
-      <p>© 2021</p>
+      <a href="/"><img src={logo} alt="Naj Movie Logo" /></a>
+      <p>© {currentYear}</p>
     </footer>
   );
 }
