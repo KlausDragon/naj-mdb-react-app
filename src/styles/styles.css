@@ -142,11 +142,14 @@ footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 1rem 0 0 0;
+  padding: 1rem 0 1rem 0;
 }
 .card .releasedate {
-  font-size: 0.75rem;
+  font-size: 1rem;
   margin: 1.5rem 0 1rem 0;
+}
+.card h3 {
+  font-size: 1.5rem;
 }
 .card .favorite-button-container {
   position: absolute;

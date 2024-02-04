@@ -19,7 +19,7 @@ function filterVideos(videoDataArray) {
 function formatText(overview) {
   
   if(overview.length > 140) {
-    return overview.substring(0, 140) + '...';
+    return overview.substring(0, 175) + '...';
   }
 
   return overview;
