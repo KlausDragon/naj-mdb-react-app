@@ -1,15 +1,15 @@
+
+
 function About() {
   return (
     <div className="about">
-      <h1>Let's talk about TMDB</h1>
+      <h1>Let's talk about Cinemagic Gateway</h1>
       <p>
-        The Movie Database (TMDB) is a community built movie and TV database.
-        Every piece of data has been added by our amazing community dating back
-        to 2008. TMDB's strong international focus and breadth of data is
-        largely unmatched and something we're incredibly proud of. Put simply,
-        we live and breathe community and that's precisely what makes us
-        different.
+      Step into the enchanting world of Cinemagic Gateway, where a simple tap opens the door to a mesmerizing realm of cinematic wonders. Unleash the magic of movies at your fingertips, as this application illuminates your path to a vast universe of film worlds, trailers, reviews, and a ticket to unforgettable entertainment. Explore the boundless possibilities of storytelling and immerse yourself in the captivating glow of Cinemagic Gateway, where every tap unfolds a new chapter in your cinematic journey. Welcome to the doorway of cinematic delight!
       </p>
+
+      <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+      
     </div>
   );
 }
