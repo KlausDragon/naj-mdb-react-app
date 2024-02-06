@@ -228,6 +228,16 @@ footer img {
   padding: 0 2.5rem;
 }
 
+.card .favorite,
+.card .favorited {
+  position: static;
+}
+
+.favorites-title {
+  display: block;
+  text-align: left;
+}
+
 .single-page-flex {
   display: flex;
   justify-content: space-between;
@@ -487,7 +497,8 @@ footer img {
   padding: 0 1rem 2rem 1rem;
   column-gap: 1.5rem;
 }
-.movies-container h2 {
+
+.movies-container-title {
   display: none;
 }
 
