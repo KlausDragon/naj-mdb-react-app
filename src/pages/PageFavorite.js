@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
-import MovieCard from '../components/MovieCard'; 
-
+import MoviesContainer from '../components/MoviesContainer'; // Import the MoviesContainer component
 
 function FavoritesPage() {
   const { favorites } = useContext(GlobalContext);
@@ -9,18 +8,14 @@ function FavoritesPage() {
   return (
     <div>
       <h2 className="favorites-title">Your Favorites</h2>
-      
-      <div className="movies-container">
-        {favorites.length > 0 ? (
-          <div>
-            {favorites.map((movie) => (
-              <MovieCard key={movie.id} movieData={movie} />
-            ))}
-          </div>
-        ) : (
-          <p>No favorites yet. Add some movies to your favorites!</p>
-        )}
-      </div>
+
+      {favorites.length > 0 ? (
+        <div>
+          <MoviesContainer moviesData={favorites} />
+        </div>
+      ) : (
+        <p>No favorites yet. Add some movies to your favorites!</p>
+      )}
     </div>
   );
 }
