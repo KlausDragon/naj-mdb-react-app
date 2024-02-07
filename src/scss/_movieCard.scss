@@ -7,64 +7,138 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  width: 185px;
+  width: 296px;
 
+  img {
+    width: 296px;
+  }
 
-}
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 444px;
+    background: rgb(15, 15, 0, 0.9); 
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Adjust the overlay color and opacity as needed */
-  display: none;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-@include mq($desktop){
-    .card:hover .overlay {
-        display: flex;
-        opacity: 1;
-      }
-}
-
-
-  
+    
+  }
+// Tap on devices < 768 em
   .overlay.visible {
-    display: block; /* Show the overlay when the 'visible' class is present */
+    display: flex;
+    opacity: 1;
+  }
+
+  .vote-average {
+    background-color: #FFC000; 
+    color: #000000;
+    padding: 8px; 
+    border-radius: 5% 20% 5% 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+//   Hover on devices > 768 em
+  @include mq($tablet) {
+    &:hover .overlay {
+      display: flex;
+      opacity: 1;
+    }
+  }
+
+  .title-and-release {
+    margin: 0 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem 0 1rem 0;
+  }
+
+  .releasedate {
+    font-size: 1rem;
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
   }
 
 
 
-.title-and-release {
-  margin: 0 0 0 1rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 1rem 0 0 0;
-}
-
-.releasedate {
-  font-size: 0.75rem;
-  margin: 1.5rem 0 1rem 0;
-}
-
-.vote-average {
-  display: none;
-}
+// Favorite button section
+.favorite-button-container{
+    position: absolute;
+    top: 0.35rem;
+    right: -0.5rem;
+    padding: 8px;
+  }
 
 .favorite {
-  display: none;
+    background-color: #5B5B5B;
+    width: 2.5rem;
+  }
+  
+  .favorite svg {
+    fill: #ffffff;
+  }
+  
+  .favorite.favorited {
+    background-color: #FFC000;
+  }
+  
+  .favorited svg {
+    fill: #000000;
+  }
+  
+  .favorite,
+  .favorite.favorited,
+  .favorite.favorited:active {
+    border-radius: 4px;
+    border-style: none;
+    cursor: pointer;
+    
+  }
+  //End Favorite button section
+
+  .movie-card-overview{
+    font-size: 1rem;
+    display: flex;
+    margin: 2rem 4rem 2rem 4rem;
+    text-align: left;
+  }
+
+  //More Info button section
+
+  .more-info {
+    background-color: #000000;
+    color: #FFC000;
+    border-style: none;
+    border-radius: 25px;
+    padding: 0.05rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  @include mq($tablet) {
+    .more-info{
+      font-size: 1.5rem;
+      border-radius: 40px;
+    }
+
+  }
+
+  .more-info:hover {
+    background-color: #FFC000;
+    color: #ffffff;
+  }
+
+  
 }

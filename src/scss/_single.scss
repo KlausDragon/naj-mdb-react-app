@@ -1,0 +1,301 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+.single-page-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.single-title {
+    font-size: 1.2rem;
+    padding: 0 .5rem;
+}
+
+.single-date {
+    font-size: .8rem;
+    padding: .5rem;
+    font-weight: 400;
+}
+
+.single-rating-text {
+    color: $background-color-black;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 0;
+    vertical-align: middle;
+
+}
+
+.single-page-rating-bg {
+    background-color: $primary-color-yellow;
+    width: 4rem;
+    height: 2rem;
+    margin: 1rem .5rem 0rem .5rem;
+    border-radius: 120px 0px 0px/ 120px;
+}
+
+.single-page-poster-tablet {
+    display: none;
+}
+
+.single-trailer{
+    width: 100%;
+    height: 45vh;
+    border: none;
+}
+
+.single-page-flex-poster-overview {
+    display: flex;
+    justify-content: space-between;
+}
+
+.single-page-poster-mobile {
+    width: 35%;
+    height: auto;
+    margin: 0 0 0 .5rem;
+}
+
+.single-page-genru-text {
+    font-size: .5em;
+    margin: .1rem .5rem;
+}
+
+.single-page-genru-bg {
+    border: thin solid gray;
+    border-radius: 30px;
+    margin: .2rem;
+}
+
+.single-page-genru-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem .1rem;
+
+}
+
+.single-page-overview-text {
+    font-size: .5em;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.single-page-button-tablet {
+    display: none;
+}
+
+.single-page-button {
+    display: flex;
+    background-color: $primary-color-yellow;
+    width: 95%;
+    height: 8vh;
+    border-radius: .3rem;
+    margin: 1rem .5rem;
+}
+
+.single-page-button-text {
+    color: $background-color-black;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: auto 0;
+}
+
+.favorite {
+    display: block;
+    background-color: $primary-color-yellow;
+    color: $background-color-black;
+    border: none;
+    border-radius: .2rem;
+    width: 3rem;
+    padding: .5rem;
+    margin: .3rem 0 0 .5rem;
+}
+
+
+@include mq($tablet-small) {
+
+    .single-page-genru-text {
+        font-size: 1rem;
+        margin: .2rem .7rem;
+    }
+
+    .single-page-genru-bg {
+        border: thin solid gray;
+        border-radius: 30px;
+        margin: .2rem;
+    }
+
+    .single-page-genru-flex {
+        margin: .8rem .1rem 1.2rem;
+    }
+
+    .single-page-overview-text {
+        font-size: .8em;
+        line-height: 1.1rem;
+    }
+}
+
+
+@include mq($tablet) {
+
+    .single-title {
+        font-size: 3rem;
+        padding: 0rem 1rem;
+    }
+    
+    .single-date {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .single-rating-text {
+        font-size: 1.7rem;
+    }
+    
+    .single-page-rating-bg {
+        width: 6.5rem;
+        height: 3rem;
+        margin: 1rem 1rem 0rem .5rem;
+    }
+    
+    .single-page-flex-poster-trailer {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .single-page-poster-tablet {
+        display: block;
+        width: 25%;
+        height: auto;
+        margin: 0rem 1rem;
+    }
+
+    .single-page-button-tablet {
+        display: block;
+    }
+
+    .favorite {
+        display: block;
+        width: 2.3rem;
+        position: absolute;
+        top: -0.3rem;
+        left: 0.5rem;
+        z-index: 999;
+    }
+
+    .single-trailer{
+        width:70%;
+        height: auto;
+        margin: 0rem 1rem 0 0;
+    }
+
+    .single-page-poster-mobile {
+       display: none;
+    }
+
+    .single-page-genru-text {
+        font-size: 1rem;
+        margin: .1rem .5rem;
+    }
+    
+    .single-page-genru-bg {
+        margin: .5rem;
+    }
+    
+    .single-page-genru-flex {
+        display: flex;
+        justify-content: left;
+        margin: 1.5rem 0 1rem 1rem;
+    }
+
+    .single-page-overview-text {
+        width: 95%;
+        font-size: 1rem;
+        margin: 0 0 2rem 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .single-page-button-text, 
+    .single-page-button {
+        display: none;
+    }
+
+
+}
+
+
+@include mq($desktop) {
+
+    .single-title {
+        font-size: 4rem;
+        padding: 0rem 2rem;
+    }
+    
+    .single-date {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+    }
+    
+    .single-rating-text {
+        font-size: 2.5rem;
+    }
+    
+    .single-page-rating-bg {
+        width: 8.5rem;
+        height: 4.5rem;
+        margin: 1rem 2rem 0rem .5rem;
+    }
+
+    .single-page-poster-tablet {
+        display: block;
+        width: 25%;
+        height: auto;
+        margin: 0rem 0rem 0rem 2rem;
+    }
+
+    .favorite {
+        display: block;
+        width: 5rem;
+        top: -0.3rem;
+        left: 1.5rem;
+    }
+
+    .single-trailer{
+        width:70%;
+        height: auto;
+        margin: 0rem 2rem 0 0;
+    }
+
+    .single-page-genru-text {
+        font-size: 2rem;
+        margin: .5rem 1rem;
+    }
+    
+    .single-page-genru-bg {
+        margin: 1rem;
+    }
+    
+    .single-page-genru-flex {
+        display: flex;
+        justify-content: left;
+        margin: 1.5rem 0 1rem 1rem;
+    }
+
+    .single-page-overview-text {
+        width: 95%;
+        font-size: 2rem;
+        margin: 0 0 4rem 2.5rem;
+        line-height: 4rem;
+    }
+
+    .single-page-button-text, 
+    .single-page-button {
+        display: none;
+    }
+
+
+}
