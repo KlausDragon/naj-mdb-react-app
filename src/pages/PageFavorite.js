@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
-import MoviesContainer from '../components/MoviesContainer'; // Import the MoviesContainer component
+import MoviesContainer from '../components/MoviesContainer';
 
 function FavoritesPage() {
   const { favorites } = useContext(GlobalContext);
