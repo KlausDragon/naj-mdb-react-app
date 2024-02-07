@@ -14,7 +14,7 @@ function FavoritesPage() {
           <MoviesContainer moviesData={favorites} />
         </div>
       ) : (
-        <p>No favorites yet. Add some movies to your favorites!</p>
+        <p className="favorites-text">No favorites yet. Add some movies to your favorites!</p>
       )}
     </div>
   );
