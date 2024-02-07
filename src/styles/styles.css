@@ -504,7 +504,6 @@ footer img {
 .movies-container {
   justify-content: center;
   padding: 0 1rem 2rem 1rem;
-  column-gap: 5rem;
   row-gap: 3rem;
   min-height: 100vh;
 }
