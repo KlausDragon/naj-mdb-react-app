@@ -105,7 +105,7 @@ footer img {
   overflow: hidden;
   cursor: pointer;
   width: 296px;
-  height: 569px;
+  height: 625px;
 }
 .card img {
   width: 296px;
@@ -145,11 +145,11 @@ footer img {
   }
 }
 .card .title-and-release {
-  margin: 0 0 0 1rem;
+  margin: 0 1rem 0 1rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 1rem 0 1rem 0;
+  padding: 1.5rem 0 1rem 0;
 }
 .card .releasedate {
   font-size: 1rem;
