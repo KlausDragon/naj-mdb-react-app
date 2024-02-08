@@ -214,11 +214,12 @@ footer img {
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
+  min-height: 100vh;
 }
 .about h1 {
   font-size: 2.5rem;
   text-transform: capitalize;
-  margin: 2rem auto;
+  margin: 4rem auto;
   text-align: center;
 }
 .about p {
@@ -508,11 +509,6 @@ footer img {
   min-height: 100vh;
 }
 
-@media (min-width: 48em) {
-  .movies-container {
-    justify-content: flex-start;
-  }
-}
 .movies-container-title {
   display: none;
 }

@@ -9,11 +9,7 @@
     min-height: 100vh;
 }
 
-@include mq($tablet){
-    .movies-container{
-        justify-content: flex-start;
-    }
-}
+
 
 .movies-container-title{
     display: none;
