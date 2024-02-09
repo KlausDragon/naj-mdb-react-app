@@ -1,4 +1,4 @@
-import logo from "../naj-movie-logo.svg";
+import logo from "../icons/naj-movie-logo.svg";
 
 function Footer() {
   const currentYear = new Date().getFullYear();

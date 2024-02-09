@@ -42,6 +42,38 @@ header nav ul li a {
   font-size: 1.2rem;
   font-weight: 500;
 }
+header .searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .searchContainer input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 1rem;
+  font-size: 0.8rem;
+}
+header .searchContainer input:focus {
+  outline: none;
+}
+header .searchContainer button {
+  padding: 3px 0 0 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffc000;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+header .searchContainer button:hover {
+  background-color: red;
+}
+header .searchContainer img {
+  width: 20px;
+  margin: 0 0.5rem;
+}
 
 @media (min-width: 48em) {
   header {
@@ -82,7 +114,7 @@ header nav ul li a {
 footer {
   display: flex;
   background-color: #161616;
-  padding: 1px 0;
+  padding: 0;
   margin: 0;
   flex-direction: column;
   align-items: center;
@@ -90,6 +122,9 @@ footer {
 footer img {
   width: 2rem;
   padding: 1rem 0 0 0;
+}
+footer p {
+  font-size: smaller;
 }
 
 .home-banner-trailer {
@@ -214,20 +249,25 @@ footer img {
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
-  min-height: 100vh;
+  margin: 5rem auto;
 }
 .about h1 {
   font-size: 2.5rem;
   text-transform: capitalize;
-  margin: 4rem auto;
   text-align: center;
+  margin-bottom: 3rem;
 }
 .about p {
   font-size: 1rem;
   line-height: 1.5;
   max-width: 700px;
-  margin: 4rem auto;
+  margin: 0 auto;
   padding: 0 2.5rem;
+}
+.about img {
+  display: block;
+  max-width: 15rem;
+  margin: 5rem auto;
 }
 
 .card .favorite,
@@ -248,6 +288,46 @@ footer img {
   line-height: 2rem;
 }
 
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #000;
+}
+.categories button {
+  background: none;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.categories button.active {
+  color: #ffc000;
+  font-weight: bold;
+  border-bottom: 3px solid #ffc000;
+}
+
+@media (min-width: 48em) {
+  .categories {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+  }
+  .categories button {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 500;
+  }
+  .categories button:hover {
+    color: #ffc000;
+  }
+}
 .single-page-flex {
   display: flex;
   justify-content: space-between;

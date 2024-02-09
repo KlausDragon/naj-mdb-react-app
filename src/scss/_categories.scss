@@ -1,0 +1,47 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #000;
+
+  button {
+    background: none;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    color: $primary-color-white;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &.active {
+      color: $primary-color-yellow;
+      font-weight: bold;
+      border-bottom: 3px solid $primary-color-yellow;
+    }
+  }
+}
+
+@include mq($tablet) {
+  .categories {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+
+    button {
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-weight: 500;
+
+      &:hover {
+        color: $primary-color-yellow;
+      }
+    }
+  }
+}

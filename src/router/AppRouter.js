@@ -7,6 +7,7 @@ import PageSingleMovie from "../pages/PageSingleMovie";
 import PageFavorite from "../pages/PageFavorite";
 import { GlobalProvider } from "../context/GlobalContext";
 import Banner from "../components/Banner";
+import PageSearch from "../pages/PageSearch";
 
 function AppRouter() {
   return (
@@ -17,7 +18,7 @@ function AppRouter() {
           <Route path="/" element={<PageHome />} />
           <Route path="/movie/:id" element={<PageSingleMovie />} />
           <Route path="/test/:id" element={<Banner />} />
-
+          <Route path="/search/:query" exact element={<PageSearch />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="/favorite" element={<PageFavorite />} />
         </Routes>
