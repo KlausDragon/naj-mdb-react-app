@@ -1,6 +1,9 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+.single-page {
+    min-height: 100vh;
+}
 
 .single-page-flex {
     display: flex;
