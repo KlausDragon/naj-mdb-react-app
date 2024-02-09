@@ -33,7 +33,7 @@ function PageSingleMovie() {
     useContext(GlobalContext);
 
   const isFavorited = favorites.find((fav) => {
-    return fav.id == id;
+    return fav.id === id;
   });
 
   function handleFavorite(event) {
