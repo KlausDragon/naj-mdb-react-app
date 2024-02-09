@@ -79,13 +79,14 @@ function PageSingleMovie() {
               <FavouriteButton movieData={movieData} />
             </div>
 
-            <iframe
+            {movieVideos.length > 0 && ( <iframe
               src={`https://www.youtube.com/embed/${movieVideos[0].key}`}
               // width="300"
               // height="200"
               title={movieData.name}
               className="single-trailer"
-            ></iframe>
+            ></iframe>)}
+           
           </div>
 
           <div className="single-page-flex-poster-overview">
