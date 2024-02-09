@@ -20,20 +20,20 @@ function Header() {
     <header className={`header ${showNav ? "show" : ""}`}>
       <div className="header-container">
         <a href="/">
-          <img src={logo} alt="Naj Movie Logo" />
+          <img src={logo} alt="YellowDoor Logo" />
         </a>
         <div className="searchContainer">
-          <input type="text" placeholder="Search for a movie" />
-          <button className="searchBtn" onClick={handleSearch()}>
+          <input
+            type="text"
+            placeholder="Search for a movie"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button className="searchBtn" onClick={handleSearch}>
             <img className="searchImg" src={searchIcon} alt="Search" />
           </button>
         </div>
-        <button
-          onClick={() => {
-            setShowNav(!showNav);
-          }}
-          className="hamburger"
-        >
+        <button onClick={() => setShowNav(!showNav)} className="hamburger">
           ☰
         </button>
       </div>
