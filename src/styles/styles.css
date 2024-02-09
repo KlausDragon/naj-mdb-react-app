@@ -165,7 +165,7 @@ footer p {
   opacity: 1;
 }
 .card .vote-average {
-  background-color: #FFC000;
+  background-color: #ffc000;
   color: #000000;
   padding: 8px;
   border-radius: 5% 20% 5% 0%;
@@ -200,14 +200,14 @@ footer p {
   padding: 8px;
 }
 .card .favorite {
-  background-color: #5B5B5B;
+  background-color: #5b5b5b;
   width: 2.5rem;
 }
 .card .favorite svg {
   fill: #ffffff;
 }
 .card .favorite.favorited {
-  background-color: #FFC000;
+  background-color: #ffc000;
 }
 .card .favorited svg {
   fill: #000000;
@@ -227,7 +227,7 @@ footer p {
 }
 .card .more-info {
   background-color: #000000;
-  color: #FFC000;
+  color: #ffc000;
   border-style: none;
   border-radius: 25px;
   padding: 0.05rem 1rem;
@@ -241,7 +241,7 @@ footer p {
   }
 }
 .card .more-info:hover {
-  background-color: #FFC000;
+  background-color: #ffc000;
   color: #ffffff;
 }
 

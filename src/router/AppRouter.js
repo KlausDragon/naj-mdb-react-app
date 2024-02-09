@@ -18,7 +18,7 @@ function AppRouter() {
           <Route path="/" element={<PageHome />} />
           <Route path="/movie/:id" element={<PageSingleMovie />} />
           <Route path="/test/:id" element={<Banner />} />
-          <Route path="/search/:query" exact element={<PageSearch />} />
+          <Route path="/search/:searchQuery" exact element={<PageSearch />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="/favorite" element={<PageFavorite />} />
         </Routes>

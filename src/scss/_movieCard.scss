@@ -9,7 +9,6 @@
   cursor: pointer;
   width: 296px;
   height: 625px;
- 
 
   img {
     width: 296px;
@@ -21,7 +20,7 @@
     left: 0;
     width: 100%;
     height: 444px;
-    background: rgb(15, 15, 0, 0.9); 
+    background: rgb(15, 15, 0, 0.9);
     display: none;
     align-items: center;
     justify-content: center;
@@ -29,26 +28,24 @@
     text-align: center;
     opacity: 0;
     transition: opacity 0.5s ease;
-
-    
   }
-// Tap on devices < 768 em
+  // Tap on devices < 768 em
   .overlay.visible {
     display: flex;
     opacity: 1;
   }
 
   .vote-average {
-    background-color: #FFC000; 
+    background-color: #ffc000;
     color: #000000;
-    padding: 8px; 
+    padding: 8px;
     border-radius: 5% 20% 5% 0%;
     position: absolute;
     top: 0;
     left: 0;
   }
 
-//   Hover on devices > 768 em
+  //   Hover on devices > 768 em
   @include mq($tablet) {
     &:hover .overlay {
       display: flex;
@@ -73,44 +70,41 @@
     font-size: 1.5rem;
   }
 
-
-
-// Favorite button section
-.favorite-button-container{
+  // Favorite button section
+  .favorite-button-container {
     position: absolute;
     top: 0.35rem;
     right: -0.5rem;
     padding: 8px;
   }
 
-.favorite {
-    background-color: #5B5B5B;
+  .favorite {
+    background-color: #5b5b5b;
     width: 2.5rem;
   }
-  
+
   .favorite svg {
     fill: #ffffff;
   }
-  
+
   .favorite.favorited {
-    background-color: #FFC000;
+    background-color: #ffc000;
   }
-  
+
   .favorited svg {
     fill: #000000;
   }
-  
+
   .favorite,
   .favorite.favorited,
   .favorite.favorited:active {
     border-radius: 4px;
     border-style: none;
     cursor: pointer;
-    
   }
   //End Favorite button section
 
-  .movie-card-overview{
+  .movie-card-overview {
     font-size: 1rem;
     display: flex;
     margin: 2rem 4rem 2rem 4rem;
@@ -121,7 +115,7 @@
 
   .more-info {
     background-color: #000000;
-    color: #FFC000;
+    color: #ffc000;
     border-style: none;
     border-radius: 25px;
     padding: 0.05rem 1rem;
@@ -130,17 +124,14 @@
   }
 
   @include mq($tablet) {
-    .more-info{
+    .more-info {
       font-size: 1.5rem;
       border-radius: 40px;
     }
-
   }
 
   .more-info:hover {
-    background-color: #FFC000;
+    background-color: #ffc000;
     color: #ffffff;
   }
-
-  
 }

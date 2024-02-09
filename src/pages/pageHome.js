@@ -68,13 +68,13 @@ function PageHome() {
               moviesData={popularMovies}
             />
           )}
-          {currentSelectedCategory == "Top Rated" && (
+          {currentSelectedCategory === "Top Rated" && (
             <MoviesContainer
               title="Top Rated Movies"
               moviesData={topRatedMovies}
             />
           )}
-          {currentSelectedCategory == "Upcoming" && (
+          {currentSelectedCategory === "Upcoming" && (
             <MoviesContainer
               title="Upcoming Movies"
               moviesData={upcomingMovies}

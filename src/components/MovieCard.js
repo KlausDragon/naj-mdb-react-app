@@ -60,7 +60,7 @@ function MovieCard({ movieData }) {
           <div className="favorite-button-container">
           <FavouriteButton movieData={movieData} />
           </div>
-
+          
           <div >
               <p className="movie-card-overview">{formatText(movieData.overview)}</p>
           </div>
