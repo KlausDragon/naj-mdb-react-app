@@ -229,13 +229,17 @@ footer p {
   font-size: 1rem;
   line-height: 1.5;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0.5rem auto;
   padding: 0 2.5rem;
+}
+.about p span {
+  font-weight: bold;
+  color: #ffc000;
 }
 .about img {
   display: block;
   max-width: 15rem;
-  margin: 5rem auto;
+  margin: 4rem auto;
 }
 
 .favorites-content {
