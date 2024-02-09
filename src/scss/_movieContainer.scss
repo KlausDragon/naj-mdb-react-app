@@ -1,20 +1,13 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-
 .movies-container {
-    justify-content: center;
-    padding: 0 1rem 2rem 1rem;
-    row-gap: 3rem;
-    min-height: 100vh;
+  justify-content: center;
+  padding: 0 1rem 2rem 1rem;
+  row-gap: 3rem;
+  min-height: 100vh;
 }
 
-
-
-.movies-container-title{
-    display: none;
+.movies-container-title {
+  display: none;
 }
-
-
-
-

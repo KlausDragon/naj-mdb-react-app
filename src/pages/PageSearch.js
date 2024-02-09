@@ -23,7 +23,7 @@ const SearchPage = () => {
   }, [searchQuery]);
 
   return (
-    <div>
+    <div className="search-content">
       <h1>Search Results..</h1>
       <MoviesContainer title="s" moviesData={searchResults} />
     </div>

@@ -42,38 +42,6 @@ header nav ul li a {
   font-size: 1.2rem;
   font-weight: 500;
 }
-header .searchContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header .searchContainer input {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  margin-right: 1rem;
-  font-size: 0.8rem;
-}
-header .searchContainer input:focus {
-  outline: none;
-}
-header .searchContainer button {
-  padding: 3px 0 0 0;
-  border: none;
-  border-radius: 5px;
-  background-color: #ffc000;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-header .searchContainer button:hover {
-  background-color: red;
-}
-header .searchContainer img {
-  width: 20px;
-  margin: 0 0.5rem;
-}
 
 @media (min-width: 48em) {
   header {
@@ -270,22 +238,20 @@ footer p {
   margin: 5rem auto;
 }
 
-.card .favorite,
-.card .favorited {
+.favorites-content {
+  min-height: 100vh;
+}
+.favorites-content .card .favorite,
+.favorites-content .card .favorited {
   position: static;
 }
-
-.favorites-title {
+.favorites-content .favorites-title {
   display: block;
   text-align: left;
-  margin: 2rem 0 2rem 2rem;
+  margin: 2rem 0 2rem 10%;
 }
-
-.favorites-text {
-  height: 100vh;
-  text-align: left;
-  margin: 2rem;
-  line-height: 2rem;
+.favorites-content .favorites-text {
+  margin-left: 10%;
 }
 
 .categories {
@@ -591,6 +557,43 @@ footer p {
 
 .movies-container-title {
   display: none;
+}
+
+.search-content h1 {
+  margin: 2rem 0 2rem 10%;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchContainer .searchInput {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 1rem;
+  font-size: 0.8rem;
+}
+.searchContainer .searchInput:focus {
+  outline: none;
+}
+.searchContainer .searchBtn {
+  padding: 3px 0 0 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffc000;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.searchContainer .searchBtn:hover {
+  background-color: red;
+}
+.searchContainer .searchImg {
+  width: 20px;
+  margin: 0 0.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

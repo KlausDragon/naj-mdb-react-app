@@ -8,16 +8,12 @@ function WorkShop() {
     <div>
       <h2>Workshop</h2>
       <div className="card">
-      <MovieCard/>
+        <MovieCard />
       </div>
 
-<Banner /> 
-      
+      <Banner />
     </div>
   );
 }
 
-
 export default WorkShop;
-
-
