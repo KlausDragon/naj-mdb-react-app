@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className={`header ${showNav ? "show" : ""}`}>
       <div className="header-container">
-        <a href="/">
+        <a href="/yellowdoor">
           <img src={logo} alt="YellowDoor Logo" />
         </a>
         <button onClick={() => setShowNav(!showNav)} className="hamburger">

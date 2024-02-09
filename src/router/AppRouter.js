@@ -11,7 +11,7 @@ import PageSearch from "../pages/PageSearch";
 
 function AppRouter() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={"/yellowdoor"}>
       <GlobalProvider>
         <Header />
         <Routes>
