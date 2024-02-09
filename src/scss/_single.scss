@@ -8,11 +8,12 @@
 .single-page-flex {
     display: flex;
     justify-content: space-between;
+    margin: 0.5rem 0 0 0;
 }
 
 .single-title {
     font-size: 1.2rem;
-    padding: 0 .5rem;
+    padding: 0 0 0rem 0.5rem;
 }
 
 .single-date {
@@ -33,8 +34,8 @@
 
 .single-page-rating-bg {
     background-color: $primary-color-yellow;
-    width: 4rem;
-    height: 2rem;
+    width: 3.5rem;
+    height: 1.9rem;
     margin: 1rem .5rem 0rem .5rem;
     border-radius: 120px 0px 0px/ 120px;
 }
@@ -144,7 +145,7 @@
 @include mq($tablet) {
 
     .single-title {
-        font-size: 3rem;
+        font-size: 2rem;
         padding: 0rem 1rem;
     }
     
@@ -154,12 +155,12 @@
     }
     
     .single-rating-text {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
     
     .single-page-rating-bg {
-        width: 6.5rem;
-        height: 3rem;
+        width: 4.6rem;
+        height: 2.6rem;
         margin: 1rem 1rem 0rem .5rem;
     }
     
