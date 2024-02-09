@@ -294,6 +294,10 @@ footer p {
     color: #ffc000;
   }
 }
+.single-page {
+  min-height: 100vh;
+}
+
 .single-page-flex {
   display: flex;
   justify-content: space-between;
