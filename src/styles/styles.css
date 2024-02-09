@@ -187,6 +187,13 @@ footer p {
   border-style: none;
   cursor: pointer;
 }
+@media (min-width: 48em) {
+  .card .favorite,
+  .card .favorite.favorited,
+  .card .favorite.favorited:active {
+    position: static;
+  }
+}
 .card .movie-card-overview {
   font-size: 1rem;
   display: flex;
